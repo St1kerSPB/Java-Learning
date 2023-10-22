@@ -44,7 +44,6 @@ public class IfElseStatementTheme {
 
         System.out.println("3. Проверка числа\n");
         int number = -120;
-        boolean isEvenNumber = number % 2 == 0;
         if (number == 0) {
             System.out.println("Число равно 0");
         } else {
@@ -53,7 +52,7 @@ public class IfElseStatementTheme {
             } else{
                 System.out.print("Число " + number + " является положительным и ");
             }
-            if (isEvenNumber == true) {
+            if (number % 2 == 0) {
                 System.out.print("четным\n");
             } else {
                 System.out.print("нечетным\n");
@@ -61,16 +60,17 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n4. Поиск одинаковых цифр в числах\n");
-        int num1 = 523;
-        int num2 = 223;
-        int hundreds1 = num1 / 100;
-        int hundreds2 = num2 / 100;
-        int tens1 = (num1 % 100) / 10;
-        int tens2 = (num2 % 100) / 10;
-        int ones1 = num1 % 10;
-        int ones2 = num2 % 10;
-        System.out.println("Исходные числа " + num1 + " и " + num2);
-        if ((hundreds1 != hundreds2) && (tens1 != tens2) && (ones1 != ones2)) {
+        int number1 = 546;
+        int number2 = 223;
+        int hundreds1 = number1 / 100;
+        int hundreds2 = number2 / 100;
+        int tens1 = (number1 % 100) / 10;
+        int tens2 = (number2 % 100) / 10;
+        int ones1 = number1 % 10;
+        int ones2 = number2 % 10;
+        boolean equalNumbers = (hundreds1 != hundreds2) && (tens1 != tens2) && (ones1 != ones2);
+        System.out.println("Исходные числа " + number1 + " и " + number2);
+        if (equalNumbers) {
             System.out.println("Равных цифр в разрядах нет");
         } else {
             System.out.println("В числах одинаковые цифры: ");
@@ -113,7 +113,7 @@ public class IfElseStatementTheme {
         System.out.println("\n7. Определение оценки по предметам\n");
         int historyPercent = 59;
         int historyGrade = 2;
-        if (historyPercent > 60 && historyPercent <=73) {
+        if (historyPercent > 60 && historyPercent <= 73) {
             historyGrade = 3;
         } else if (historyPercent > 73 && historyPercent <= 91) {
             historyGrade = 4;
@@ -133,8 +133,8 @@ public class IfElseStatementTheme {
         System.out.println("Программирование: " + programmmingGrade);
         float averageGrades = (historyGrade + programmmingGrade) / 2f;
         float averagePercent = (historyPercent + programmingPercent) / 2f;
-        System.out.println("Средний балл оценок по предметам: " + (float) averageGrades);
-        System.out.println("Средний процент по предметам: " + (float) averagePercent);
+        System.out.println("Средний балл оценок по предметам: " + averageGrades);
+        System.out.println("Средний процент по предметам: " + averagePercent);
 
         System.out.println("\n8. Расчет годовой прибыли\n");
         int salesPerMonth = 13_000;

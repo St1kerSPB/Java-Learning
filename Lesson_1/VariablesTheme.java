@@ -60,9 +60,9 @@ public class VariablesTheme {
         System.out.println("Новые значения переменной: " + a + " и " + b + "\n");
         System.out.println("Перестановка с помощью побитовой операции");
         System.out.println("Исходные значения переменной: " + a + " и " + b);
-        b = a^b;
+        b ^= a;
         a ^= b;
-        b = a^b;
+        b ^= a;
         System.out.println("Новые значения переменной: " + a + " и " + b + "\n");
 
         System.out.println("6. Вывод символов и их кодов.\n");
